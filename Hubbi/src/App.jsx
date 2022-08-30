@@ -1,30 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 import Characters from "./Principais/Characters/index";
-import Armas from "./Principais/Armas/index";
-import Naves from "./Principais/Naves/index";
 import Title from "./components/Title/index";
+import { UserContext } from "./contexts/";
+import * as C from "./styles/AppStyles";
 
 function App() {
-  const [data, setData] = useState([]);
+  const { data, setData } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("https://swapi.dev/api/")
+    fetch("https://swapi.dev/api/people")
       .then((response) => response.json())
-      .then((dados) => [console.log(dados), setData(dados)]);
+      .then((dados) => [console.log(dados), setData(dados.results)]);
   }, []);
 
   return (
-    <div className="App">
+    <C.Container>
       <Header />
       <Title texto="Faça sua pesquisa" />
-      <div>
-        <Characters data={data} />
+      <div className="principal">
+        <Characters />
+      
       </div>
 
       <Footer />
-    </div>
+    </C.Container>
   );
 }
 

@@ -7,13 +7,7 @@ function Header() {
     <C.Container>
       <div className="content">
         <div className="logo">Logo</div>
-        <div className="menu">
-          <ul>
-            <li>Characters</li>
-            <li>Weapon </li>
-            <li>Aircraft</li>
-          </ul>
-        </div>
+        <div className="menu"></div>
       </div>
     </C.Container>
   );

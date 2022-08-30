@@ -1,14 +1,10 @@
 import styled from "styled-components";
-import bg from "../../assets/bg.jpg";
 
 export const Container = styled.div`
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  width: 100%;
+  height: 100%;
   .content {
-    width: 95%;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -17,12 +13,29 @@ export const Container = styled.div`
     .campos {
       width: 450px;
       height: 600px;
-
-      background-image: url(${bg});
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.1;
     }
   }
 `;
+
+export const Lista = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  li {
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    &:hover {
+      color: #ffe300;
+    }
+  }
+`;
+
+export const Item = styled.div`
+  color: #fff;
+`;
+
+export const Pesquisa = styled.input``;
