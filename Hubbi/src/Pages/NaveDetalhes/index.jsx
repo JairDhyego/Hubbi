@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../contexts/index";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Spin } from "antd";
 import * as C from "./styles";
 
@@ -15,7 +15,7 @@ function NaveDetalhes() {
     fetch(`https://swapi.dev/api/starships/${id}`)
       .then((response) => response.json())
       .then((dados) => {
-        console.log(dados.results);
+        setItemsNaves(dados);
       })
       .catch((err) => console.log(err))
       .finally(setLoading(false));
@@ -23,7 +23,7 @@ function NaveDetalhes() {
 
   useEffect(() => {
     requestCall();
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -32,22 +32,33 @@ function NaveDetalhes() {
       ) : (
         <C.Container>
           <C.Conteudo>
-            <h3>Nome:{itemsNaves.name}</h3>
-            <span>modelo:{itemsNaves.model}</span>
-            <span>Velocidade-Maxima: {itemsNaves.max_atmosphering_speed} </span>
-            <span>Filme:{itemsNaves.films} </span>
-            <span>
+            <h3>{itemsNaves?.name}</h3>
+            <div>
+              modelo: <span> {itemsNaves?.model} </span>
+            </div>
+            <div>
+              Velocidade-Maxima:
+              <span> {itemsNaves?.max_atmosphering_speed} </span>
+            </div>
+            <div>
+              Filme em que aparece:
+              <span>
+                <Link to={"itemsNaves?.films"} target="_blank">
+                  Filme
+                </Link>
+              </span>
+            </div>
+            <div>
               pilotos:
-              {itemsNaves.pilots
-                ? itemsNaves.pilots.map((item) => <div>{item}</div>)
-                : null}
-            </span>
-            <span>
-              Carga suportada:{" "}
-              {itemsNaves.cargo_capacity
-                ? itemsNaves.cargo_capacity.map((item) => <div>{item}</div>)
-                : null}
-            </span>
+              {itemsNaves?.pilots ? (
+                itemsNaves?.pilots.map((item) => <div>{item}</div>)
+              ) : (
+                <span>Não tem.</span>
+              )}
+            </div>
+            <div>
+              Carga suportada: <span>{itemsNaves?.cargo_capacity}</span>
+            </div>
           </C.Conteudo>
         </C.Container>
       )}

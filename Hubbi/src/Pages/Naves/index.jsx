@@ -1,7 +1,7 @@
 import { useCallback, useContext, useEffect } from "react";
 import { UserContext } from "./../../contexts/index";
 import { Pagination, Spin } from "antd";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import * as C from "../styles";
 
 function Naves() {
@@ -35,8 +35,6 @@ function Naves() {
     requestCall();
   }, [requestSelected, page]);
 
-  const setarParams = () => {};
-
   return (
     <C.Container>
       {loading ? (
@@ -44,10 +42,13 @@ function Naves() {
       ) : (
         <>
           <C.Map>
-            {data.map((item) => {
+            {data.map((item, key) => {
               return (
                 <C.Itemprincipal key={item.name}>
-                  <h3> {item.name}</h3>
+                  <Link to={`${key}`}>
+                    {" "}
+                    <h3> {item.name}</h3>
+                  </Link>
                   <div>
                     <span> Modelo: {item.model}</span>
                     <span> Valor:{item.cost_in_credits}</span>

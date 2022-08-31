@@ -27,6 +27,8 @@ export const Map = styled.div`
 
 export const Itemprincipal = styled.div`
   border: 2px solid #ffe300;
+  background-color: #000200;
+  opacity: 0.8;
   border-radius: 5px;
 
   h3 {

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid red;
   width: 100%;
   height: 400px;
   font-size: 12px;
@@ -19,5 +18,12 @@ export const Conteudo = styled.div`
   height: 100%;
   h3 {
     color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  div {
+    font-size: 20px;
   }
 `;

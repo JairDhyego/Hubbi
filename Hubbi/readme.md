@@ -1,9 +1,10 @@
-## Titulo: 
+## Entrevista Projeto 
 
-Projeto para entrevista na Habbi.
+Projeto para entrevista na Hubbi, muito divertido usando algumas tecnologias do mercado.
 
-## Comentários:
 
-|Projeto de criação de uma lista e apresentação de 
+## Inclompleto.
+infelizmente foi solicitado a utilização da ferramenta "JWT" ao qual eu não tenho dominio.
 
-## As images usadas são gratuidas.
+### Codigo para rodar npm run dev.
+### A image usada é gratuida.
