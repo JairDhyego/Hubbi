@@ -1,8 +1,12 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 import { Container } from "./styles";
 
 function DetailsCharacts() {
+  params = useParams();
+
+  
   return (
     <Container>
       <div>

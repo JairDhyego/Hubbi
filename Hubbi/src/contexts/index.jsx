@@ -4,11 +4,17 @@ export const UserContext = createContext({});
 
 function UserProvider({ children }) {
   const [data, setData] = useState([]);
-  const [input, setInput] = useState("");
-  const [lista, setLista] = useState("");
+  const [search, setSearch] = useState("");
 
   return (
-    <UserContext.Provider value={{ data, setData, input, setInput }}>
+    <UserContext.Provider
+      value={{
+        data,
+        setData,
+        search,
+        setSearch,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );

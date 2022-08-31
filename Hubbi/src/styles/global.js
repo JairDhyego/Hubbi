@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 body{
-    max-width: 1120px;
+   
     width: 100%;
 
     height: 100vh;
@@ -24,6 +24,8 @@ body{
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+
 
 
      

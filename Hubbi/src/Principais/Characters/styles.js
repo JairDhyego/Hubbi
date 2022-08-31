@@ -3,29 +3,23 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  .content {
-    width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .campos {
-      width: 450px;
-      height: 600px;
-    }
-  }
-`;
-
-export const Lista = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+`;
 
-  gap: 15px;
+export const Options = styled.ul`
+  width: 700px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
   li {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     transition: all 0.3s;
     &:hover {
@@ -33,9 +27,3 @@ export const Lista = styled.ul`
     }
   }
 `;
-
-export const Item = styled.div`
-  color: #fff;
-`;
-
-export const Pesquisa = styled.input``;
