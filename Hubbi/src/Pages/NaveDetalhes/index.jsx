@@ -34,7 +34,7 @@ function NaveDetalhes() {
           <C.Conteudo>
             <h3>{itemsNaves?.name}</h3>
             <div>
-              modelo: <span> {itemsNaves?.model} </span>
+              Modelo: <span> {itemsNaves?.model} </span>
             </div>
             <div>
               Velocidade-Maxima:
@@ -49,7 +49,7 @@ function NaveDetalhes() {
               </span>
             </div>
             <div>
-              pilotos:
+              Pilotos:
               {itemsNaves?.pilots ? (
                 itemsNaves?.pilots.map((item) => <div>{item}</div>)
               ) : (
@@ -58,6 +58,12 @@ function NaveDetalhes() {
             </div>
             <div>
               Carga suportada: <span>{itemsNaves?.cargo_capacity}</span>
+            </div>
+            <div>
+              Fabricante: <span>{itemsNaves?.manufacturer}</span>
+            </div>
+            <div>
+              Tempo utilizável: <span>{itemsNaves?.consumables}</span>
             </div>
           </C.Conteudo>
         </C.Container>
