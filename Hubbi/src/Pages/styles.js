@@ -26,10 +26,14 @@ export const Map = styled.div`
 `;
 
 export const Itemprincipal = styled.div`
-  border: 2px solid #ffe300;
+  border: 1px solid #ffe300;
   background-color: #000200;
   opacity: 0.8;
   border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.04);
+  }
 
   h3 {
     font-weight: bold;
