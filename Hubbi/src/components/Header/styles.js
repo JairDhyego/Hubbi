@@ -18,19 +18,19 @@ export const Container = styled.header`
     .logo {
       font-size: 20px;
       font-weight: bold;
+      color: #eee;
     }
+  }
+`;
 
-    .menu {
-      ul {
-        width: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        li {
-          font-size: 15px;
-          font-weight: bold;
-        }
-      }
-    }
+export const Menu = styled.div`
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #eee;
   }
 `;

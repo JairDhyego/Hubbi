@@ -1,16 +1,17 @@
-import React from "react";
-
 import * as C from "./styles";
-import Title from "./../Title/index";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <C.Container>
       <div className="content">
-        <div className="logo">Logo</div>
-        <div className="menu">
-          <Title texto="Login" />
-        </div>
+        <Link to="/" className="logo">
+          Logo
+        </Link>
+        <C.Menu>
+          <Link to="/people">People</Link>
+          <Link to="/naves">Naves/Armas</Link>
+        </C.Menu>
       </div>
     </C.Container>
   );

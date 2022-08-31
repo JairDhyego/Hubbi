@@ -11,4 +11,8 @@ export const Container = styled.header`
   padding: 10px 15px;
   font-size: 20px;
   font-weight: bold;
+  background-color: #222;
+  position: fixed;
+  bottom: 0;
+  color: #ffe300; ;
 `;
